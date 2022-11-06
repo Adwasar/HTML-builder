@@ -12,7 +12,6 @@ const pathToBundle = path.join(__dirname, 'project-dist');
     const currentPath = path.join(pathToStyles, file.name);
 
     if (path.extname(currentPath) === '.css' ) {
-      console.log(file.name);
       const fileContent = await fs.readFile(currentPath, 'utf8');
       stylesAll.push(fileContent);
     }
