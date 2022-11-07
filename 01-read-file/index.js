@@ -1,6 +1,9 @@
-const fs = require('fs');
+const fs = require('fs/promises');
+const path = require('path');
 
-fs.readFile('01-read-file/text.txt', 'utf-8', function(err, data) {
-  if (err) throw err;
-  console.log(data);
-});
+const pathToFile = path.join(__dirname, 'text.txt');
+
+(async function readThisFile() {
+  const thisFile = await fs.readFile(pathToFile, 'utf-8');
+  console.log(thisFile);
+})();
