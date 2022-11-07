@@ -26,5 +26,4 @@ const pathToFile = path.join(__dirname, 'text.txt');
     process.exit();
   });
 })();
-
-
+// test
